@@ -9,6 +9,7 @@ using UnityEngine;
 public class CardCtrl : MonoBehaviour {
 
 	public float moveSpeed;			// Speed that the card follows the mouse
+	public int cPower;				// Define power of the card
 
 	private Vector3 mousePos;		// Get's the mouse position
 
@@ -22,8 +23,11 @@ public class CardCtrl : MonoBehaviour {
 		FollowMouse ();
 	}
 
+	/// <summary>
+	/// Makes the card follows the mouse and 
+	/// destroy it if the left click is released
+	/// </summary>
 	void FollowMouse(){
-		
 			mousePos = Input.mousePosition;
 			mousePos = Camera.main.ScreenToWorldPoint (mousePos);
 			transform.position = Vector2.Lerp (transform.position, mousePos, moveSpeed);
@@ -34,7 +38,7 @@ public class CardCtrl : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.gameObject.CompareTag("Enemy")){
-			Destroy(other.gameObject);
+			
 			Destroy(gameObject);
 		}
 	}

@@ -9,20 +9,26 @@ using UnityEngine;
 /// </summary>
 public class EnemySpawner : MonoBehaviour {
 
-	public GameObject enemy;				// Get's the enemy object
+
 	public float spawnDelay;				// Delay between each spawn
+	public EnemyTypes enemies;				// Get the Class EnemyType which stores all enemies
+	[Header("Enemy Position Spawn")]
+	public Transform pos1;                  // Get's the gameobjects that holds the positions where the enemies are going to spawn
+	public Transform pos2;
+	public Transform pos3;
+	public Transform pos4;
 
 
 	bool canSpawn;
-	List<Vector3> EnemyPosSpawn = new List <Vector3> ();
+	List<Transform> EnemyPosSpawn = new List <Transform> ();
 
 	void Awake(){
 		// Positions where the enemies are going to be spawned
-		EnemyPosSpawn.Add (new Vector3 (-2.9f, 4.6f, 0f));
-		EnemyPosSpawn.Add (new Vector3 (-1.55f, 4.6f, 0f));
-		EnemyPosSpawn.Add (new Vector3 (-0.1f, 4.6f, 0f));
-		EnemyPosSpawn.Add (new Vector3 (1.35f, 4.6f, 0f));
-		EnemyPosSpawn.Add (new Vector3 (2.8f, 4.6f, 0f));
+		EnemyPosSpawn.Add (pos1);
+		EnemyPosSpawn.Add (pos2);
+		EnemyPosSpawn.Add (pos3);
+		EnemyPosSpawn.Add (pos4);
+	
 
 
 	}
@@ -44,8 +50,11 @@ public class EnemySpawner : MonoBehaviour {
 
 
 	IEnumerator SpawnEnemy(){
-		int r = Random.Range (0, 5);
-		Instantiate (enemy,  EnemyPosSpawn [r], Quaternion.identity);
+		int r = Random.Range (0, 4);
+		int e = Random.Range (0, 3);
+		Transform allPos = EnemyPosSpawn [r];
+		Vector3 vec = allPos.transform.position;
+		Instantiate (enemies.enemies [e],  vec,Quaternion.identity);
 		canSpawn = false;
 		yield return new WaitForSeconds (spawnDelay);
 		canSpawn = true;
