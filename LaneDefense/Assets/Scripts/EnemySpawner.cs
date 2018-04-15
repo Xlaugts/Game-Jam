@@ -10,7 +10,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour {
 
 
-	public float spawnDelay;				// Delay between each spawn
+	public float spawnDelay;				// Delay between each spawn set this to 2.5
 	public EnemyTypes enemies;				// Get the Class EnemyType which stores all enemies
 	[Header("Enemy Position Spawn")]
 	public Transform pos1;                  // Get's the gameobjects that holds the positions where the enemies are going to spawn
@@ -42,10 +42,10 @@ public class EnemySpawner : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		
 		if (canSpawn) {
 			StartCoroutine("SpawnEnemy");
 		}
+
 	}
 
 

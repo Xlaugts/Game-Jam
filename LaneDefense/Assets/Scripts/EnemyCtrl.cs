@@ -9,8 +9,15 @@ public class EnemyCtrl : MonoBehaviour {
 
 
 	void OnTriggerEnter2D(Collider2D other){
-		if(other.gameObject.CompareTag("Card")){
+		switch (other.gameObject.tag) {
+		case "Card": 
 			GameCtrl.instance.CardContact (enemy);
+			break;
+		case "SpecialCard":
+			GameCtrl.instance.SpecialCardContact (enemy);
+			break;
+			default:
+			break;
 		}
 	}
 }
