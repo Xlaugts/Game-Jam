@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4342086551423552}
   - component: {fileID: 212918261430236170}
   - component: {fileID: 114525856118209512}
-  - component: {fileID: 61547819075209516}
+  - component: {fileID: 58513734017055422}
   m_Layer: 0
   m_Name: Card_lvl3
   m_TagString: Card
@@ -42,8 +42,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61547819075209516
-BoxCollider2D:
+--- !u!58 &58513734017055422
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -51,22 +51,12 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 0.64, y: 0.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
-  m_EdgeRadius: 0
+  m_Radius: 0.416
 --- !u!114 &114525856118209512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,7 +104,7 @@ SpriteRenderer:
   m_SortingLayerID: 60527885
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 942e08d8ecbaae54aaa27de7b01de296, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b989f003597b4ea44968ec47fa544e49, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

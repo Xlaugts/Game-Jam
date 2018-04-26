@@ -17,6 +17,7 @@ public class CardSelectCtrl : MonoBehaviour {
 	/// </summary>
 	/// <param name="card">Card.</param>
 	public void Card(GameObject card){
+		AudioCtrl.instance.CardSpawnAudio (card.transform.position);
 		Instantiate (card, button.transform.position, Quaternion.identity);
 	
 	}

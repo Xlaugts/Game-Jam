@@ -16,6 +16,9 @@ public class EnemyCtrl : MonoBehaviour {
 		case "SpecialCard":
 			GameCtrl.instance.SpecialCardContact (enemy);
 			break;
+		case "SpecialCard2":
+			GameCtrl.instance.SpecialCardContact2 ();
+			break;
 			default:
 			break;
 		}

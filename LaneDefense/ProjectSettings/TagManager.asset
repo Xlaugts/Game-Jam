@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - Card
   - SpecialCard
+  - SpecialCard2
+  - Enemies
+  - Lives
   layers:
   - Default
   - TransparentFX

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4272549273663884}
   - component: {fileID: 212812211495826130}
   - component: {fileID: 114203671186124786}
-  - component: {fileID: 61816396276130390}
+  - component: {fileID: 58955962684948722}
   m_Layer: 0
   m_Name: Card_lvl2
   m_TagString: Card
@@ -36,14 +36,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1907969509884926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.8808918, y: -4.38, z: 0}
+  m_LocalPosition: {x: 7.1, y: -0.99, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61816396276130390
-BoxCollider2D:
+--- !u!58 &58955962684948722
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -51,22 +51,12 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 0.64, y: 0.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
-  m_EdgeRadius: 0
+  m_Radius: 0.416
 --- !u!114 &114203671186124786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,7 +104,7 @@ SpriteRenderer:
   m_SortingLayerID: 60527885
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8a49de20cae69a74186a3ccdab053ffc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f0ef96f8284cf243bf636593fe82b01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

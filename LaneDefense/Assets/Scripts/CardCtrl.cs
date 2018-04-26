@@ -37,7 +37,7 @@ public class CardCtrl : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		if(other.gameObject.CompareTag("Enemy")){
+		if(other.gameObject.CompareTag("Enemy")|| other.gameObject.CompareTag("Lives")){
 			
 			Destroy(gameObject);
 		}

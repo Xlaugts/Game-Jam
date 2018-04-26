@@ -18,7 +18,6 @@ public class EnemySpawner : MonoBehaviour {
 	public Transform pos3;
 	public Transform pos4;
 
-
 	bool canSpawn;
 	List<Transform> EnemyPosSpawn = new List <Transform> ();
 
@@ -52,11 +51,20 @@ public class EnemySpawner : MonoBehaviour {
 	IEnumerator SpawnEnemy(){
 		int r = Random.Range (0, 4);
 		int e = Random.Range (0, 3);
+		int liveR = Random.Range (0, 15); // chance for a life to spawn 1 in 15
 		Transform allPos = EnemyPosSpawn [r];
 		Vector3 vec = allPos.transform.position;
-		Instantiate (enemies.enemies [e],  vec,Quaternion.identity);
+
+		if (liveR == 4) {
+			Instantiate (enemies.enemies [3], vec, Quaternion.identity);
+		} else {
+			Instantiate (enemies.enemies [e], vec, Quaternion.identity);
+		}
+
 		canSpawn = false;
 		yield return new WaitForSeconds (spawnDelay);
 		canSpawn = true;
 	}
+
+
 }
