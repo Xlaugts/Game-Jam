@@ -38,3 +38,5 @@ D:\GamesDevelopment\LaneDefense\Temp\bin\Debug\UnityEngine.HoloLens.xml
 D:\GamesDevelopment\LaneDefense\Temp\bin\Debug\UnityEngine.SpatialTracking.xml
 D:\GamesDevelopment\LaneDefense\obj\Debug\Assembly-CSharp.dll
 D:\GamesDevelopment\LaneDefense\obj\Debug\Assembly-CSharp.pdb
+D:\GamesDevelopment\LaneDefense\Temp\bin\Debug\Vuforia.UnityExtensions.dll
+D:\GamesDevelopment\LaneDefense\Temp\bin\Debug\Vuforia.UnityExtensions.xml

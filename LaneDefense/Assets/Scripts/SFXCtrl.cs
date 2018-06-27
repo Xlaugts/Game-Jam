@@ -14,13 +14,15 @@ public class SFXCtrl : MonoBehaviour {
 		if (instance == null)
 			instance = this;
 	}
-	
-	public void CardsExplosion(Vector3 pos){
-		Instantiate (sfx.contactExplosion, pos, Quaternion.identity);
-	}
 
+	// Special enable effect
 	public void SpecialEnableSFX(Vector3 pos){
 		Instantiate (sfx.specialFX, pos, Quaternion.identity);
+	}
+
+	// Enemy explosion effect
+	public void SFX_Explosion(Vector3 pos, int color){ // color 0 = green, 1 = red, 2 = yellow
+		Instantiate(sfx.sfx_Eplosion[color], pos,Quaternion.identity);
 	}
 
 }

@@ -36,6 +36,7 @@ public class CardCtrl : MonoBehaviour {
 		}
 	}
 
+	// Destroy the card when collide with the enemy
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.gameObject.CompareTag("Enemy")|| other.gameObject.CompareTag("Lives")){
 			

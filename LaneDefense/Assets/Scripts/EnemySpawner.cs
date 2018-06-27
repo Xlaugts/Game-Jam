@@ -18,8 +18,8 @@ public class EnemySpawner : MonoBehaviour {
 	public Transform pos3;
 	public Transform pos4;
 
-	bool canSpawn;
-	List<Transform> EnemyPosSpawn = new List <Transform> ();
+	bool canSpawn;							// allow an enemy to be spwned
+	List<Transform> EnemyPosSpawn = new List <Transform> ();			// list with all positions the enemies are going to be spawned
 
 	void Awake(){
 		// Positions where the enemies are going to be spawned
@@ -48,17 +48,27 @@ public class EnemySpawner : MonoBehaviour {
 	}
 
 
+	/// <summary>
+	/// Spawns a random enemy after a delay
+	/// </summary>
+	/// <returns>The enemy.</returns>
 	IEnumerator SpawnEnemy(){
-		int r = Random.Range (0, 4);
-		int e = Random.Range (0, 3);
-		int liveR = Random.Range (0, 15); // chance for a life to spawn 1 in 15
+		int r = Random.Range (0, 4);		// gets the random position to spawn
+		int e = Random.Range (0, 3);		// set the random enemy to spanw
+		int liveR = Random.Range (0, 20); // chance for a life to spawn 1 in 15
 		Transform allPos = EnemyPosSpawn [r];
 		Vector3 vec = allPos.transform.position;
 
 		if (liveR == 4) {
 			Instantiate (enemies.enemies [3], vec, Quaternion.identity);
 		} else {
-			Instantiate (enemies.enemies [e], vec, Quaternion.identity);
+			if (e == 0) {
+				Instantiate (enemies.enemies [e], vec, Quaternion.identity);
+			} else if (e == 1) {
+				Instantiate (enemies.enemies [e], vec, Quaternion.identity);
+			} else if (e == 2) {
+				Instantiate (enemies.enemies [e], vec, Quaternion.identity);
+			}
 		}
 
 		canSpawn = false;
